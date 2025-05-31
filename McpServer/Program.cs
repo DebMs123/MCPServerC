@@ -6,6 +6,5 @@ builder.Services.AddMcpServer().WithHttpTransport().WithToolsFromAssembly();
 var app = builder.Build();
 // Add MCP middleware
 app.MapMcp();
-app.MapGet("/", () => "Hello World!");
 app.MapGet("/home", () => "Hello World!");
 app.Run();
